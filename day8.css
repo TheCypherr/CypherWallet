@@ -1,0 +1,647 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@500&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #000000;
+  color: #fff;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* margin: 5px 100px; */
+}
+
+/* Main Body Styling */
+.main-body {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo img {
+  width: 100px;
+  height: 50px;
+}
+.logo {
+  background: none;
+}
+
+header {
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+.menu {
+  position: absolute;
+  right: 100px;
+  display: none;
+  /* top: 20px; */
+}
+.menu img {
+  width: 30px;
+  cursor: pointer;
+}
+
+.active {
+  /* display: none; */
+}
+
+.body-head {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -5px;
+  padding: 30px;
+  padding-top: 15px;
+  padding-bottom: 2px;
+  position: fixed;
+  border-bottom: 2px solid #ffffff;
+  background: #000000;
+}
+nav ul {
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 5px;
+}
+nav a {
+  padding: 5px;
+  text-transform: uppercase;
+  color: #ebe6e6;
+  list-style-type: none;
+  text-decoration: none;
+}
+nav a.Home,
+a:hover {
+  color: #000;
+  font-weight: bold;
+  background: #47aff0;
+  transition: 0.5s;
+  border-radius: 3px;
+}
+
+nav video {
+  margin-top: 10px;
+}
+
+.button button {
+  width: 150px;
+  height: 35px;
+  font-weight: 16px;
+  background-color: transparent;
+  box-shadow: 0px 0px 15px #3b98d1;
+  margin-right: 60px;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.button button:hover {
+  background: #3b98d1;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Small Body Styling */
+.small-body {
+  align-items: center;
+  margin: auto;
+  /* margin-left: 60px; */
+  display: flex;
+  width: 100%;
+}
+
+.first-side {
+  margin: auto;
+  margin-top: 140px;
+  margin-left: -30px;
+  width: 400px;
+}
+.texts h1 {
+  font-size: 50px;
+  font-family: "Oxanium", sans-serif;
+  margin-bottom: 10px;
+}
+.texts h5 {
+  font-weight: normal;
+  font-size: 15px;
+}
+.connect button {
+  width: 350px;
+  height: 40px;
+  font-size: 17px;
+  font-weight: bold;
+  background-color: transparent;
+  box-shadow: 0px 0px 15px #3b98d1;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+.connect button:hover {
+  background: #3b98d1;
+  color: #ffffff;
+}
+
+.bottom {
+  display: flex;
+}
+.first {
+  font-weight: normal;
+  margin-top: 20px;
+  height: 50px;
+}
+.first h1 {
+  margin-bottom: -15px;
+  font-weight: normal;
+  margin-top: -10px;
+}
+.first h5 {
+  font-weight: normal;
+  padding-top: 2px;
+}
+
+.second {
+  font-weight: normal;
+  margin-left: 40px;
+  margin-top: 20px;
+  border-left: 2px solid #3b98d1;
+  padding-left: 50px;
+  height: 50px;
+}
+.second h1 {
+  margin-bottom: -15px;
+  margin-top: -10px;
+  font-weight: normal;
+}
+.second h5 {
+  font-weight: normal;
+  padding-top: 2px;
+}
+
+.second-side {
+  margin: auto;
+  margin-top: 70px;
+}
+
+.second-side img {
+  /* margin: auto; */
+  width: 450px;
+  height: 538px;
+}
+
+/* Collection Stylings */
+.collection-body {
+  margin-top: 70px;
+}
+
+.did-you {
+  margin: auto;
+  margin-bottom: 50px;
+  text-align: center;
+  max-width: 800px;
+  line-height: 20px;
+}
+
+.expensive-nft {
+  text-align: center;
+  margin: auto;
+  max-width: 1200px;
+}
+.ape-one {
+  margin: auto;
+  margin-top: 50px;
+  max-width: 100%;
+  text-align: center;
+  display: flex;
+}
+
+.side1 {
+  margin: auto;
+  margin-top: -5px;
+  text-align: left;
+  width: 350px;
+}
+.side1 p {
+  line-height: 20px;
+}
+.side1 ul {
+  margin-top: -10px;
+}
+.side2 {
+  margin-right: 100px;
+  margin-bottom: 10px;
+}
+.side2 img {
+  width: 300px;
+  height: 300px;
+  margin-left: 70px;
+}
+
+/* .Copyright h5 {
+  font-weight: normal;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  color: rgba(120, 117, 117, 0.5);
+} */
+
+/* Account Styling */
+.account-main {
+  width: 500px;
+  align-content: center;
+  position: absolute;
+  border-radius: 8px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  background-color: #000;
+  z-index: 10;
+}
+.account-main h1 {
+  margin-top: -2px;
+}
+
+.account-body {
+  margin: auto;
+  align-self: center;
+  padding: 20px;
+  width: 400px;
+  /* height: 300px; */
+  box-shadow: 0px 0px 15px #3b98d1;
+  border-radius: 10px;
+  text-align: center;
+  display: block;
+}
+
+.google-button button {
+  width: 300px;
+  margin-top: 10px;
+  height: 35px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.google-button button:hover {
+  background-color: #dbd8d8;
+}
+
+.google-button img {
+  position: absolute;
+  padding-left: 30px;
+  padding-top: 12px;
+}
+
+.details input {
+  padding-left: 5px;
+  margin-bottom: 14px;
+  width: 280px;
+  height: 29px;
+}
+
+.create button {
+  width: 120px;
+  height: 32px;
+  margin-left: 170px;
+  background-color: #000;
+  box-shadow: 0px 0px 7px #3b98d1;
+  color: #fff;
+  margin-top: 7px;
+  cursor: pointer;
+}
+.create button:hover {
+  background: #3b98d1;
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+}
+
+.existing {
+  font-size: 13px;
+  text-align: left;
+  color: #fff;
+}
+.existing span a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+}
+.existing span a:hover {
+  background: none;
+  font-weight: bold;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  z-index: 5;
+}
+.hidden {
+  display: none;
+}
+
+/* Login Styling */
+.login-main {
+  width: 500px;
+  align-content: center;
+  position: absolute;
+  border-radius: 8px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  background-color: #000;
+  z-index: 10;
+}
+
+/* Footer Styling */
+footer {
+  max-width: 100%;
+  margin: auto;
+  margin-top: 50px;
+  padding: 20px;
+  display: flex;
+  text-align: center;
+  box-shadow: 0px 0px 15px #3b98d1;
+}
+
+.big-footer {
+  margin: auto;
+  margin-top: -10px;
+  /* margin-left: 30px; */
+}
+
+.big-footer h1 {
+  text-align: center;
+  width: 300px;
+}
+.connect-new button {
+  width: 200px;
+  margin-top: 2px;
+}
+
+footer h2 {
+  text-align: center;
+  padding-left: 40px;
+  margin-bottom: -2px;
+}
+
+.popular-nft {
+  margin: auto;
+  width: 220px;
+  margin-top: 15px;
+}
+.links {
+  margin: auto;
+  width: 220px;
+  margin-top: 15px;
+}
+.address {
+  margin: auto;
+  width: 280px;
+  margin-top: 15px;
+}
+
+footer ul li {
+  list-style-type: none;
+  color: #fff;
+  padding-bottom: 5px;
+}
+footer ul li:hover {
+  font-weight: bold;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+/* MOBILE RESPONSIVENESS */
+/* MEDIA QUERY FOR HEADER */
+/* For screens with max width of 952px */
+@media (max-width: 952px) {
+  .logo img {
+    width: 80px;
+    height: 40px;
+    margin-left: -10px;
+  }
+  .button button {
+    display: none;
+  }
+  .body-head ul li {
+    text-align: center;
+  }
+  .body-head a {
+    font-size: 16px;
+  }
+}
+
+/* For Portrait */
+@media (max-width: 600px) {
+  body {
+    font-size: small;
+    margin: 0;
+    padding: 0;
+  }
+  .main-body {
+    margin: auto;
+    padding: 20px;
+  }
+  /* Header Styling */
+  header {
+  }
+  .menu {
+    position: absolute;
+    display: block;
+    right: 80px;
+  }
+  .menu img {
+    width: 30px;
+    cursor: pointer;
+  }
+  nav ul {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.15s ease-in-out;
+  }
+  nav ul li {
+    display: block;
+    margin: 20px 0;
+    line-height: 30px;
+  }
+  .header a {
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+  }
+  nav a.Home,
+  nav a:hover {
+    background: none;
+    color: #3b98d1;
+  }
+  .active {
+    display: none;
+  }
+
+  /* Account Styling */
+  .account-main {
+    width: 280px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .login-main {
+    width: 280px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .account-body {
+    margin: auto;
+    width: 240px;
+  }
+  .google-button button {
+    width: 240px;
+  }
+  .google-button img {
+    padding-left: 10px;
+  }
+  .details input {
+    width: 220px;
+  }
+  .create button {
+    margin-left: 100px;
+  }
+
+  /* Small Body Style */
+  .small-body {
+    flex-direction: column;
+  }
+  .first-side {
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    order: 1;
+  }
+  .texts {
+    margin: auto;
+    padding: 10px;
+  }
+  .texts h5 {
+    font-size: 18px;
+    text-align: left;
+  }
+  .connect {
+    margin: auto;
+    margin-top: -15px;
+    text-align: center;
+  }
+  .connect button {
+    width: 330px;
+  }
+  .bottom {
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .second-side {
+    margin: auto;
+    justify-content: center;
+    margin-top: 20px;
+    order: 2;
+  }
+  .second-side img {
+    width: 350px;
+    height: 438px;
+  }
+  .did-you h1 {
+    font-size: 30px;
+    padding-bottom: 15px;
+  }
+  .did-you p {
+    font-size: 18px;
+  }
+  .expensive-nft h1 {
+    margin-bottom: -20px;
+  }
+  .ape-one {
+    margin: auto;
+    width: 100%;
+    margin-top: 40px;
+    text-align: center;
+    justify-content: center;
+  }
+  .side2 {
+    margin: auto;
+    margin-right: 15px;
+  }
+  .side2 img {
+    width: 100px;
+    height: 100px;
+    margin-left: 2px;
+  }
+  .side1 p {
+    font-size: 15px;
+  }
+  footer {
+    max-width: 100%;
+    margin: auto;
+    margin-top: 40px;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .big-footer {
+    margin: auto;
+    width: 100%;
+  }
+  .big-footer h1 {
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 25px;
+    line-height: 40px;
+  }
+  .popular-nft {
+    margin: auto;
+    width: 100%;
+    text-align: left;
+  }
+  .links {
+    margin: auto;
+    width: 100%;
+    text-align: left;
+  }
+  .address {
+    margin: auto;
+    width: 100%;
+    text-align: left;
+  }
+  footer a {
+    font-size: 19px;
+  }
+  footer h2 {
+    font-size: 25px;
+  }
+}
