@@ -47,9 +47,6 @@ for (let i = 0; i < btnOpenModal.length; i++) {
 // Add event listeners to overlay to close modal
 overlay.addEventListener("click", closeModal); // Close Modal on Overlay click
 
-// Add event listeners to overlay to close modal when user scroll up
-window.addEventListener("scroll", closeModal); // Close Modal on any scroll at all
-
 // Add eventListener to switch form button
 btnSwitchToSignup.addEventListener("click", showSignUpForm); //Switch to signUp Form
 btnSwitchToLogin.addEventListener("click", showLoginForm); //Switch to login Form
