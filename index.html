@@ -3,50 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="day8.css" />
+    <link rel="stylesheet" href="index.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <script
-      src="https://kit.fontawesome.com/a076d05399.js"
-      crossorigin="anonymous"
-    ></script>
     <title>NFT's by CYPHER</title>
   </head>
   <body>
-    <header class="body-header">
-      <div class="body-head">
-        <div class="menu" id="menuToggle" onclick="toggleMenu()">
-          <img src="images/menu.webp" />
-        </div>
-        <div class="logo">
-          <a href="index.html"> <img src="images/logoo.webp" /> </a>
-        </div>
-        <nav class="active" id="menuCheck">
-          <ul>
-            <a href="index.html" class="Home menu-item" onclick="exitMenu()"
-              ><li>Home</li></a
-            >
-            <a href="#" class="open-modal menu-item" onclick="exitMenu()"
-              ><li>Account</li></a
-            >
-            <a href="#" onclick="scrollToExNft(); exitMenu();" class="menu-item"
-              ><li>Collection</li></a
-            >
-            <a
-              href="#"
-              onclick="scrollToContact(); exitMenu();"
-              class="menu-item"
-              ><li>Contact</li></a
-            >
-          </ul>
-        </nav>
-        <div class="button open-modal">
-          <button onclick="scrollToHeader()">Connect Wallet</button>
-        </div>
-      </div>
-    </header>
     <div class="main-body">
       <!-- Account Section Sign Up -->
       <div class="account-main hidden">
@@ -60,12 +24,16 @@
           </div>
           <p>_________OR_________</p>
           <div class="details">
-            <input type="text" placeholder="Email:" /><br />
-            <input type="text" placeholder="Username:" /><br />
-            <input type="password" placeholder="Password:" /><br />
+            <input type="text" id="username" placeholder="Username:" /><br />
+            <input type="text" id="email" placeholder="Email:" /><br />
+            <input
+              type="password"
+              id="password"
+              placeholder="Password:"
+            /><br />
           </div>
           <div class="create">
-            <button>Create Wallet</button>
+            <button id="signUp">Create Wallet</button>
           </div>
           <div class="existing">
             <p>
@@ -76,16 +44,35 @@
         </div>
       </div>
 
+      <div class="successful-main hidden">
+        <h1>Successful ✅</h1>
+        <div class="account-body">
+          <div class="existing">
+            <p>
+              <a href="#" id="switchToLogin2">Login </a><span>to continue</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
       <!-- Account Section Login -->
       <div class="login-main hidden">
         <h1>Login Wallet</h1>
         <div class="account-body">
           <div class="details">
-            <input type="text" placeholder="Email / Username:" /><br />
-            <input type="password" placeholder="Password:" /><br />
+            <input
+              type="text"
+              id="email2"
+              placeholder="Email / Username:"
+            /><br />
+            <input
+              type="password"
+              id="password2"
+              placeholder="Password:"
+            /><br />
           </div>
           <div class="create">
-            <button>Login Wallet</button>
+            <button id="Login">Login Wallet</button>
           </div>
           <div class="existing">
             <p>
@@ -96,267 +83,37 @@
         </div>
       </div>
 
-      <!-- SMALL BODY BEGINNING  -->
+      <!-- NFT Gif Image  -->
       <div class="small-body">
         <div class="second-side">
           <img src="images/crop gif.webp" />
         </div>
 
-        <div class="first-side">
-          <div class="texts">
-            <h1>
-              Discover <br />
-              more than your imagination.
-            </h1>
-            <h5>
-              Partner with Rootzero's most popular waller 'Cypher Art'<br />
-              to showcase your digital art.
-            </h5>
-          </div>
-
-          <div class="connect open-modal">
-            <button>Connect Wallet</button>
-          </div>
-
-          <div class="bottom">
-            <div class="first">
-              <h1>94K</h1>
-              <h5>Active user</h5>
-            </div>
-
-            <div class="second">
-              <h1>4K</h1>
-              <h5>Art work</h5>
-            </div>
-
-            <div class="second">
-              <h1>1.5K</h1>
-              <h5>Artist</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="collection-body">
-        <div class="did-you">
-          <h1>DID YOU KNOW!?</h1>
-          <p>
-            Broadly speaking, there are two types of NFT art. First, you have
-            one-off visuals that are sold as non-fungible tokens, just like
-            paintings in real life. Think the Beeple NFTs that were sold at
-            Christie's for as high as $69 million. Second, you have NFT
-            collections like the Bored Ape Yacht Club, which are mostly designed
-            to be used as profile pictures on social media. The latter have
-            become the dominant style, where most of the money is spent.
-          </p>
+        <div class="text-overlay">
+          <h3 class="animated-text">Welcome on Board!</h3>
         </div>
 
-        <div class="expensive-nft">
-          <h1>Most expensive Bored Ape. Yacht Club NFTs</h1>
+        <div class="text-overlay2">
+          <h3>Showcase your Digital Arts!</h3>
+        </div>
 
-          <!-- First Side for Ape -->
-          <div class="ape-one">
-            <div class="side2">
-              <img src="images/ape1.webp" />
-              <h2>Bored Ape #3562</h2>
-            </div>
-
-            <div class="side1">
-              <p>
-                Bored Ape #3562 is a distinctive digital artwork from the Bored
-                Ape Yacht Club NFT collection. Its unique combination of
-                attributes makes the zombie-eyed unshaven ape appearance
-                stylishly clad in a black suit one of a kind. Adding a touch of
-                flair, this ape sports a flipped-brim hat, a rare trait shared
-                by only 231 other apes.
-              </p>
-              <br />
-              <ul>
-                <li>Highest Sale Price: $1.63 million</li>
-                <li>Sale Price in ETH: 430 ETH</li>
-                <li>
-                  Key Attribute: Zombie-eyed, unshaven ape, black Suit,
-                  flipped-brim hat
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Second Side for Ape -->
-          <div class="ape-one">
-            <div class="side2">
-              <img src="images/ape2.webp" />
-              <h2>Bored Ape #8135</h2>
-            </div>
-
-            <div class="side1">
-              <p>
-                Bored Ape #8135 holds a prominent position as the 7th rarest ape
-                in the esteemed collection, justifying its significant purchase
-                price of 550 ETH. What makes this NFT stand out is its exclusive
-                traits that make it rare and valuable. One of Ape #8135's most
-                remarkable features is the unshaven dagger-in-mouth trait, found
-                in only 28 other apes in the collection.
-              </p>
-              <br />
-              <ul>
-                <li>Highest Sale Price: $1.87 million</li>
-                <li>Sale Price in ETH: 666 ETH</li>
-                <li>
-                  Key Attributes: Bored unshaven dagger in mouth, Hip Hop
-                  clothing, hypnotized eyes, trippy captain's hat
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Third Side for Ape -->
-          <div class="ape-one">
-            <div class="side2">
-              <img src="images/ape3.webp" />
-              <h2>Bored Ape #4580</h2>
-            </div>
-
-            <div class="side1">
-              <p>
-                Bored Ape #4580 is a unique and captivating character from the
-                BAYC collection. Bearing a creative fusion of personas, this NFT
-                embodies a biker, sailor, and 3D movie aficionado. Its solid
-                gold fur and combination of six distinct traits make the ape a
-                memorable and coveted NFT. Rarity Tools recognizes BAYC #4580 as
-                the 257th rarest NFT in the collection.
-              </p>
-              <br />
-              <ul>
-                <li>Highest Sale Price: $1.9 million</li>
-                <li>Sale Price in ETH: 666 ETH</li>
-                <li>
-                  Key Attributes: Solid gold fur, 3D glasses, seaman's hat,
-                  biker vest, orange background, and confused-looking mouth
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Fourth Side for Ape -->
-          <div class="ape-one">
-            <div class="side2">
-              <img src="images/ape4.webp" />
-              <h2>Bored Ape #7090</h2>
-            </div>
-
-            <div class="side1">
-              <p>
-                Bored Ape #7090 is the 62nd rarest NFT in the 10,000-piece Bored
-                Ape Yacht Club collection, according to Rarity tools. On
-                February 6, 2023, this expensive primate fetched 800 ETH, equal
-                to $1.3 million. Previously, Bored Ape #7090 fetched 600 ETH (or
-                an all-time high price of $2.25 million) on OpenSea in September
-                2021 after getting auctioned alongside 100 other Bored Ape NFTs
-                for $24,393,000 at a Sotheby’s auction.
-              </p>
-              <br />
-              <ul>
-                <li>Highest Sale Price: $2.2 million</li>
-                <li>Sale Price in ETH: 600 ETH</li>
-                <li>
-                  Key Attributes: Service clothing, heart eyes, multicolored
-                  grin, solid gold fur, doorman eyes, and new punk blue
-                  background
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Fifth Side for Ape -->
-          <div class="ape-one">
-            <div class="side2">
-              <img src="images/ape5.webp" />
-              <h2>Bored Ape #2087</h2>
-            </div>
-
-            <div class="side1">
-              <p>
-                Bored Ape #2087 is the 9th rarest NFT—featuring distinctive
-                attributes such as rainbow-colored skin, trippy fur, angry eyes,
-                and a cigarette in its mouth—fetched an impressive 769 ETH,
-                equal to over $2.3 million back then. While it’s not the highest
-                sale in the BAYC NFT collection, it highlights the ongoing boom
-                in the NFT market as collectors and digital art enthusiasts
-                continue to invest heavily in rare and exceptional NFTs.
-              </p>
-              <br />
-              <ul>
-                <li>Highest Sale Price: $2.3 million</li>
-                <li>Sale Price in ETH: 769 ETH</li>
-                <li>
-                  Key Attributes: rainbow-colored skin, trippy fur apes, angry
-                  eyes, and a cigarette-clenching mouth.
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Fifth Side for Ape -->
+        <div class="connect open-modal">
+          <button>Create Wallet</button>
         </div>
       </div>
     </div>
     <div class="overlay hidden"></div>
 
-    <footer>
-      <div class="big-footer">
-        <h1>
-          Connect Wallet<br />
-          To Showcase your <br />
-          Digital Art!
-        </h1>
-        <p></p>
-        <div class="connect connect-new open-modal">
-          <button onclick="scrollToHeader()">Connect Wallet</button>
-        </div>
-      </div>
-      <div class="popular-nft">
-        <h2>Popular NFTs</h2>
-        <ul>
-          <a href="#"><li>Bored Ape Yacht</li></a>
-          <a href="#"><li>Quantum</li></a>
-          <a href="#"><li>Bored Ape Kennel</li></a>
-          <a href="#"><li>CryptoPunks</li></a>
-        </ul>
-      </div>
+    <!-- <script type="module" src="firebase-auth.js"></script> -->
 
-      <div class="links">
-        <h2>Links</h2>
-        <ul>
-          <a href="#"><li>About</li></a>
-          <a href="#"><li>New Wallet</li></a>
-          <a href="#"><li>Discover</li></a>
-          <a href="#"><li>Join Community</li></a>
-        </ul>
-      </div>
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js"></script>
+    <!-- Your custom script -->
+    <script src="firebase-init.js" defer></script>
 
-      <div class="address">
-        <h2>Contact Us</h2>
-        <ul>
-          <a href="#"><li>Address: 3 Wellington Street, Washington DC.</li></a>
-          <a href="https://wa.me/+2347012208069"
-            ><li>Call/Text: +234 701 220 8069</li></a
-          >
-        </ul>
-      </div>
-
-      <div class="big-footer">
-        <h1>
-          Sign Up for<br />
-          Latest NFTs Updates.
-        </h1>
-        <p></p>
-        <div class="connect connect-new">
-          <button>Sign Up</button>
-        </div>
-      </div>
-    </footer>
-    <script src="day8.js"></script>
+    <script type="module" src="index.js"></script>
   </body>
 </html>
 

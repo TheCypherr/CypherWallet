@@ -106,6 +106,21 @@ nav video {
   font-weight: bold;
 }
 
+/* Username Styling */
+.dashboard {
+  position: absolute;
+  margin: auto;
+  padding-top: 100px;
+  right: 20px;
+  margin-bottom: -100px;
+  width: 300px;
+  font-size: 18px;
+  z-index: -1000;
+}
+.dashboard span {
+  font-weight: bold;
+}
+
 /* Small Body Styling */
 .small-body {
   align-items: center;
@@ -536,6 +551,12 @@ footer a {
   }
   .create button {
     margin-left: 100px;
+  }
+
+  /* Username Styling */
+  .dashboard {
+    padding-top: 50px;
+    right: -150px;
   }
 
   /* Small Body Style */

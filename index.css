@@ -1,0 +1,538 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@500&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #000000;
+  color: #fff;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* margin: 5px 100px; */
+}
+
+/* INDEX.HTML STYLING */
+.main-body0 {
+  max-width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+/* Main Body Styling */
+.main-body {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.active {
+  /* display: none; */
+}
+
+/* Small Body Styling */
+.small-body {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  position: relative;
+  /* margin-left: 60px; */
+  /* display: block; */
+}
+
+.second-side {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+}
+
+.second-side img {
+  filter: brightness(30%);
+  /* opacity: 80%; */
+  margin: auto;
+  margin-top: 80px;
+  width: 450px;
+  height: 508px;
+}
+
+.text-overlay {
+  margin: auto;
+}
+.text-overlay h3 {
+  position: absolute;
+  top: 1%;
+  right: 43%;
+  color: #6bc6ff;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Pacifico", cursive;
+}
+
+.animated-text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: transparent;
+  animation: reveal 5s linear forwards;
+}
+@keyframes reveal {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.animated-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  background-color: #000;
+  animation: cursor 5s linear infinite;
+}
+@keyframes cursor {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.text-overlay2 h3 {
+  position: absolute;
+  width: 350px;
+  top: 3%;
+  color: #ffffff;
+  line-height: 110px;
+  right: 39%;
+  text-align: center;
+  font-size: 80px;
+  font-style: italic;
+  font-weight: bold;
+  font-family: "Pacifico";
+}
+
+.connect button {
+  margin: auto;
+  width: 300px;
+  height: 37px;
+  position: absolute;
+  top: 93%;
+  right: 42%;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #000;
+  box-shadow: 0px 0px 15px #3b98d1;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /* margin-bottom: 30px;
+  margin-top: 20px; */
+}
+.connect button:hover {
+  background: #3b98d1;
+  color: #ffffff;
+}
+
+/* .Copyright h5 {
+  font-weight: normal;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  color: rgba(120, 117, 117, 0.5);
+} */
+
+/* Account Styling */
+.account-main {
+  width: 500px;
+  align-content: center;
+  position: absolute;
+  border-radius: 8px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  background-color: #000;
+  z-index: 10;
+}
+.account-main h1 {
+  margin-top: -2px;
+}
+
+.successful-main {
+  width: 500px;
+  align-content: center;
+  position: absolute;
+  border-radius: 8px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  background-color: #000;
+  z-index: 10;
+}
+
+.existing p a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff;
+}
+.existing p a:hover {
+  font-weight: bold;
+}
+.existing span {
+  font-size: 16px;
+}
+
+.account-body {
+  margin: auto;
+  align-self: center;
+  padding: 20px;
+  width: 400px;
+  /* height: 300px; */
+  box-shadow: 0px 0px 15px #3b98d1;
+  border-radius: 10px;
+  text-align: center;
+  display: block;
+}
+
+.google-button button {
+  width: 300px;
+  margin-top: 10px;
+  height: 35px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.google-button button:hover {
+  background-color: #dbd8d8;
+}
+
+.google-button img {
+  position: absolute;
+  padding-left: 30px;
+  padding-top: 12px;
+}
+
+.details input {
+  padding-left: 5px;
+  margin-bottom: 14px;
+  width: 280px;
+  height: 29px;
+}
+
+.create button {
+  width: 120px;
+  height: 32px;
+  margin-left: 170px;
+  background-color: #000;
+  box-shadow: 0px 0px 7px #3b98d1;
+  color: #fff;
+  margin-top: 7px;
+  cursor: pointer;
+}
+.create button:hover {
+  background: #3b98d1;
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+}
+
+.existing {
+  font-size: 13px;
+  text-align: left;
+  color: #fff;
+}
+.existing span a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+}
+.existing span a:hover {
+  background: none;
+  font-weight: bold;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  z-index: 5;
+}
+.hidden {
+  display: none;
+}
+
+/* Login Styling */
+.login-main {
+  width: 500px;
+  align-content: center;
+  position: absolute;
+  border-radius: 8px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  background-color: #000;
+  z-index: 10;
+}
+
+/* MOBILE RESPONSIVENESS */
+/* MEDIA QUERY FOR HEADER */
+/* For screens with max width of 952px */
+@media (max-width: 952px) {
+  .logo img {
+    width: 80px;
+    height: 40px;
+    margin-left: -10px;
+  }
+  .button button {
+    display: none;
+  }
+  .body-head ul li {
+    text-align: center;
+  }
+  .body-head a {
+    font-size: 16px;
+  }
+}
+
+/* For Portrait */
+@media (max-width: 600px) {
+  body {
+    font-size: small;
+    margin: 0;
+    padding: 0;
+  }
+  .main-body {
+    margin: auto;
+    padding: 20px;
+  }
+  /* Header Styling */
+  header {
+    top: 0;
+  }
+  .body-head {
+    margin-top: -10px;
+  }
+  .menu {
+    position: absolute;
+    display: block;
+    right: 80px;
+  }
+  .menu img {
+    width: 30px;
+    cursor: pointer;
+  }
+  nav ul {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    top: 54%;
+    left: 46%;
+    transform: translate(-50%, -50%);
+    transition: 0.15s ease-in-out;
+  }
+  nav ul li {
+    display: block;
+    margin: 20px 0;
+    line-height: 30px;
+  }
+  .header a {
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+  }
+  nav a.Home,
+  nav a:hover {
+    background: none;
+    color: #3b98d1;
+  }
+  .active {
+    display: none;
+  }
+
+  /* Account Styling */
+  .account-main {
+    width: 280px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .login-main {
+    width: 280px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .successful-main {
+    width: 280px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .account-body {
+    margin: auto;
+    width: 240px;
+  }
+  .google-button button {
+    width: 240px;
+  }
+  .google-button img {
+    padding-left: 10px;
+  }
+  .details input {
+    width: 220px;
+  }
+  .create button {
+    margin-left: 100px;
+  }
+
+  /* Small Body Style */
+  .small-body {
+    flex-direction: column;
+  }
+  .first-side {
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    order: 1;
+  }
+  .texts {
+    margin: auto;
+    padding: 10px;
+  }
+  .texts h5 {
+    font-size: 18px;
+    text-align: left;
+  }
+  .connect {
+    margin: auto;
+    margin-top: -15px;
+    text-align: center;
+  }
+  .connect button {
+    top: 97%;
+    right: 6%;
+    width: 330px;
+  }
+  .bottom {
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .second-side {
+    margin: auto;
+    justify-content: center;
+    margin-top: 20px;
+    order: 2;
+  }
+  .second-side img {
+    margin-top: 70px;
+    width: 380px;
+    height: 489px;
+  }
+  .text-overlay h3 {
+    margin-top: 5px;
+    right: 13%;
+  }
+  .text-overlay2 h3 {
+    right: 8%;
+    font-size: 70px;
+    width: 300px;
+  }
+  .did-you h1 {
+    font-size: 30px;
+    padding-bottom: 15px;
+  }
+  .did-you p {
+    font-size: 18px;
+  }
+  .expensive-nft h1 {
+    margin-bottom: -20px;
+  }
+  .ape-one {
+    margin: auto;
+    width: 100%;
+    margin-top: 40px;
+    text-align: center;
+    justify-content: center;
+  }
+  .side2 {
+    margin: auto;
+    margin-right: 15px;
+  }
+  .side2 img {
+    width: 100px;
+    height: 100px;
+    margin-left: 2px;
+  }
+  .side1 p {
+    font-size: 15px;
+  }
+  footer {
+    max-width: 100%;
+    margin: auto;
+    margin-top: 40px;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .big-footer {
+    margin: auto;
+    width: 100%;
+  }
+  .big-footer h1 {
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 25px;
+    line-height: 40px;
+  }
+  .popular-nft {
+    margin: auto;
+    width: 100%;
+    text-align: left;
+  }
+  .links {
+    margin: auto;
+    width: 100%;
+    text-align: left;
+  }
+  .address {
+    margin: auto;
+    width: 100%;
+    text-align: left;
+  }
+  footer a {
+    font-size: 19px;
+  }
+  footer h2 {
+    font-size: 25px;
+  }
+}
