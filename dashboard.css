@@ -455,9 +455,9 @@ footer a {
   }
   .button button {
     margin: auto;
-    width: 50px;
+    width: 55px;
     height: 30px;
-    margin-right: 90px;
+    margin-left: -150px;
   }
 
   .body-head ul li {
@@ -559,8 +559,10 @@ footer a {
 
   /* Username Styling */
   .dashboard {
+    margin: auto;
     padding-top: 50px;
-    right: -150px;
+    margin-left: -140px;
+    width: 100px;
   }
 
   /* Small Body Style */
