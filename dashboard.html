@@ -9,6 +9,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <title>NFT's by CYPHER</title>
+    <script type="module" src="dashboard.js" defer></script>
   </head>
   <body>
     <header class="body-header">
@@ -107,7 +108,7 @@
       </div>
 
       <!-- SMALL BODY BEGINNING  -->
-      <div class="dashboard"><span id="usernameDisplay"></span></div>
+      <div class="dashboard"><h3 id="usernameDisplay"></h3></div>
       <div class="small-body">
         <div class="second-side">
           <img src="images/crop gif.webp" />
@@ -125,8 +126,8 @@
             </h5>
           </div>
 
-          <div class="connect open-modal">
-            <button>Connect Wallet</button>
+          <div class="connect">
+            <button>Get Started</button>
           </div>
 
           <div class="bottom">
@@ -376,8 +377,6 @@
     <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js"></script>
     <!-- Your custom script -->
     <script src="firebase-init.js" defer></script>
-
-    <script type="module" src="dashboard.js"></script>
   </body>
 </html>
 

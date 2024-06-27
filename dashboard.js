@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .then((snapshot) => {
           if (snapshot.exists()) {
             const userData = snapshot.val();
-            usernameDisplay.innerHTML = `Hey, ${userData.username}!`;
+            usernameDisplay.innerHTML = `Hi, ${userData.username}! 👋`;
           }
         })
         .catch((error) => {
