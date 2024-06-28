@@ -25,12 +25,19 @@
           <p>_________OR_________</p>
           <div class="details">
             <input type="text" id="username" placeholder="Username:" /><br />
+            <p class="invalid hidden" id="invalidUsername">
+              Username is too long!
+            </p>
             <input type="text" id="email" placeholder="Email:" /><br />
+            <p class="invalid hidden" id="invalidEmail">Invalid Email!</p>
             <input
               type="password"
               id="password"
               placeholder="Password:"
             /><br />
+            <p class="invalid hidden" id="invalidPassword">
+              Password is too short!
+            </p>
           </div>
           <div class="create">
             <button id="signUp">Create Wallet</button>
@@ -60,16 +67,16 @@
         <h1>Login Wallet</h1>
         <div class="account-body">
           <div class="details">
-            <input
-              type="text"
-              id="email2"
-              placeholder="Email / Username:"
-            /><br />
+            <input type="text" id="email2" placeholder="Email:" /><br />
+            <p class="invalid hidden" id="invalidEmail">Invalid Email!</p>
             <input
               type="password"
               id="password2"
               placeholder="Password:"
             /><br />
+            <p class="invalid hidden" id="invalidPassword">
+              Password is too short!
+            </p>
           </div>
           <div class="create">
             <button id="Login">Login Wallet</button>

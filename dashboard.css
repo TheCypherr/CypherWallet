@@ -459,6 +459,7 @@ footer a {
   }
   .button button {
     font-size: small;
+    padding: 5px;
     margin: auto;
     width: 57px;
     height: 30px;

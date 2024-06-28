@@ -175,6 +175,17 @@ body {
   margin-top: -2px;
 }
 
+p.invalid {
+  margin: auto;
+  padding: 5px;
+  text-align: left;
+  margin-top: -15px;
+  color: red;
+  margin-left: 50px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
 .successful-main {
   width: 500px;
   align-content: center;

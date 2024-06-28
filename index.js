@@ -37,7 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const btnOpenModal = document.querySelectorAll(".open-modal");
   const modal = document.querySelector(".account-main");
   const successful = document.querySelector(".successful-main");
-  const usernameDisplay = document.querySelector("#usernameDisplay");
   const loginModal = document.querySelector(".login-main");
   const overlay = document.querySelector(".overlay");
   const btnSwitchToSignup = document.querySelector("#switchToSignup");
