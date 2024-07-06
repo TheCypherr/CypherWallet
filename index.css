@@ -114,7 +114,7 @@ body {
 .text-overlay2 h3 {
   position: absolute;
   width: 350px;
-  top: 3%;
+  top: 1%;
   color: #ffffff;
   line-height: 110px;
   right: 39%;
@@ -146,6 +146,14 @@ body {
 .connect button:hover {
   background: #3b98d1;
   color: #ffffff;
+}
+
+p.feature {
+  position: absolute;
+  top: 86%;
+  left: 37.5%;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 /* .Copyright h5 {
@@ -383,6 +391,15 @@ p.invalid {
   }
   .active {
     display: none;
+  }
+
+  p.feature {
+    margin: auto;
+    position: absolute;
+    top: 92%;
+    left: 6.5%;
+    font-weight: bold;
+    font-size: 16px;
   }
 
   /* Account Styling */
