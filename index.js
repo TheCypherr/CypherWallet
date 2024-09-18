@@ -2,15 +2,13 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import {
   getDatabase,
-  set,
+  get,
   ref,
-  update,
+  child,
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 import {
   getAuth,
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  // onAuthStateChanged,
+  onAuthStateChanged,
   // logout,
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
@@ -32,16 +30,13 @@ const auth = getAuth();
 
 // DOM ELEMENTS
 document.addEventListener("DOMContentLoaded", () => {
-  const signUp = document.querySelector("#signUp");
-  const signIn = document.querySelector("#Login");
   const btnOpenModal = document.querySelectorAll(".open-modal");
   const modal = document.querySelector(".account-main");
-  const successful = document.querySelector(".successful-main");
   const loginModal = document.querySelector(".login-main");
   const overlay = document.querySelector(".overlay");
   const btnSwitchToSignup = document.querySelector("#switchToSignup");
+  const usernameDisplay = document.querySelector("#usernameDisplay");
   const btnSwitchToLogin = document.querySelector("#switchToLogin");
-  const btnSwitchToLoginAgain = document.querySelector("#switchToLogin2");
   const scrollHeader = document.querySelector(".body-header");
   const scrollCollection = document.querySelector(".expensive-nft");
   const scrollContact = document.querySelector(".address");
@@ -49,68 +44,32 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.querySelector("#menuToggle");
   const menuItems = document.querySelectorAll(".menu-item");
 
-  // CREATE A PASSWORD BASED ACCT
-  signUp.addEventListener("click", (e) => {
-    var email = document.getElementById("email").value;
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
+  // Monitor authentication state changes
+  // onAuthStateChanged(auth, (user) => {
+  //   if (user) {
+  //     // User is signed in
+  //     const userId = user.uid;
 
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed up
-        const user = userCredential.user;
+  //     //   Fetch user data
+  //     get(child(ref(database), `users/${userId}`))
+  //       .then((snapshot) => {
+  //         if (snapshot.exists()) {
+  //           const userData = snapshot.val();
+  //           usernameDisplay.innerHTML = `Hi, ${userData.username}! 👋`;
+  //         }
+  //       })
+  //       .catch((error) => {
+  //         console.error(error);
+  //       });
 
-        set(ref(database, "users/" + user.uid), {
-          username: username,
-          email: email,
-        });
-
-        // alert("user created!");
-
-        // Clear the input fields
-        document.getElementById("email").value = "";
-        document.getElementById("username").value = "";
-        document.getElementById("password").value = "";
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-
-        alert(errorMessage);
-        // ..
-      });
-  });
-
-  // TO LOGIN A USER WITH EMAIL & PASSWORD
-  signIn.addEventListener("click", (e) => {
-    var email = document.getElementById("email2").value;
-    var password = document.getElementById("password2").value;
-
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed in
-        const user = userCredential.user;
-        window.location.assign("dashboard.html");
-
-        const dt = new Date();
-        update(ref(database, "users/" + user.uid), {
-          last_login: dt,
-        });
-
-        // alert("User logged in!");
-
-        // Clear the input fields
-        document.getElementById("email2").value = "";
-        document.getElementById("password2").value = "";
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-
-        alert(errorMessage);
-      });
-    console.log(email, password);
-  });
+  //     dashboard.classList.remove("hidden"); // Show the dashboard
+  //     closeModal(); // Hide the login/signup modal
+  //   } else {
+  //     // User is signed out
+  //     dashboard.classList.add("hidden"); // Hide the dashboard
+  //     window.location.assign("index.html");
+  //   }
+  // });
 
   // Function to show the modal, overlay
   const openModal = function () {
@@ -123,7 +82,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeModal = function () {
     modal.classList.add("hidden"); // Hide the main modal
     loginModal.classList.add("hidden");
-    successful.classList.add("hidden");
     overlay.classList.add("hidden"); // Hide the overlay
   };
 
@@ -131,21 +89,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const showLoginForm = function () {
     loginModal.classList.remove("hidden"); //Show the Login form
     modal.classList.add("hidden"); // Hide the sign up form
-    successful.classList.add("hidden"); // Hide the success form
   };
 
   // Function to show the Sign up form
   const showSignUpForm = function () {
     modal.classList.remove("hidden"); // Show the SignUp Form
     loginModal.classList.add("hidden"); // Hide the Login Form
-    successful.classList.add("hidden"); // Hide the success form
-  };
-
-  // Function to show the Successful
-  const success = function () {
-    successful.classList.remove("hidden"); // Show the Success Form
-    loginModal.classList.add("hidden"); // Hide the Login Form
-    modal.classList.add("hidden"); // Hide the sign up form
   };
 
   // Add event listeners to open modal buttons
@@ -159,8 +108,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Add eventListener to switch form button
   btnSwitchToSignup.addEventListener("click", showSignUpForm); //Switch to signUp Form
   btnSwitchToLogin.addEventListener("click", showLoginForm); //Switch to login Form
-  btnSwitchToLoginAgain.addEventListener("click", showLoginForm); //Switch to login Form
-  signUp.addEventListener("click", success); //Switch to Success Form
 
   // Function to scroll to collection
   function scrollToExNft() {
@@ -176,6 +123,10 @@ document.addEventListener("DOMContentLoaded", () => {
   function scrollToContact() {
     scrollContact.scrollIntoView({ behavior: "smooth" });
   }
+
+  // scrollCollection.addEventListener("click", scrollToExNft);
+  // scrollHeader.addEventListener("click", scrollToHeader);
+  // scrollContact.addEventListener("click", scrollToContact);
 
   // Function to toggle the menu
   function toggleMenu() {

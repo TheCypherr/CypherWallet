@@ -11,149 +11,250 @@ body {
   /* margin: 5px 100px; */
 }
 
-/* INDEX.HTML STYLING */
-.main-body0 {
-  max-width: 100%;
-  height: 100vh;
+/* Main Body Styling */
+.main-body {
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Main Body Styling */
-.main-body {
-  max-width: 100%;
-  margin: 0 auto;
+.logo img {
+  width: 100px;
+  height: 50px;
+}
+.logo {
+  background: none;
+}
+
+header {
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+.menu {
+  position: absolute;
+  right: 100px;
+  display: none;
+  /* top: 20px; */
+}
+.menu img {
+  width: 30px;
+  cursor: pointer;
 }
 
 .active {
   /* display: none; */
 }
 
+.body-head {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -5px;
+  padding: 30px;
+  padding-top: 15px;
+  padding-bottom: 2px;
+  position: fixed;
+  border-bottom: 2px solid #ffffff;
+  background: #000000;
+}
+nav ul {
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 5px;
+}
+nav a {
+  padding: 5px;
+  text-transform: uppercase;
+  color: #ebe6e6;
+  list-style-type: none;
+  text-decoration: none;
+}
+nav a.Home,
+a:hover {
+  color: #000;
+  font-weight: bold;
+  background: #47aff0;
+  transition: 0.5s;
+  border-radius: 3px;
+}
+
+nav video {
+  margin-top: 10px;
+}
+
+.button button {
+  /* width: 100px; */
+  height: 35px;
+  font-size: 17px;
+  font-weight: bold;
+  font-weight: 16px;
+  background-color: transparent;
+  margin-right: 60px;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Username Styling */
+.dashboard {
+  position: absolute;
+  margin: auto;
+  box-shadow: 0px 0px 15px #3b98d1;
+  margin-top: 100px;
+  right: 20px;
+  width: 200px;
+  z-index: -1000;
+}
+.dashboard h3 {
+  margin: auto;
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
 /* Small Body Styling */
 .small-body {
-  width: 100%;
-  justify-content: center;
   align-items: center;
-  text-align: center;
   margin: auto;
-  position: relative;
   /* margin-left: 60px; */
-  /* display: block; */
-}
-
-.second-side {
+  display: flex;
   width: 100%;
+}
+
+.first-side {
   margin: auto;
-  text-align: center;
-  justify-content: center;
+  margin-top: 140px;
+  margin-left: -30px;
+  width: 400px;
 }
-
-.second-side img {
-  filter: brightness(30%);
-  /* opacity: 80%; */
-  margin: auto;
-  margin-top: 80px;
-  width: 450px;
-  height: 508px;
+.texts h1 {
+  font-size: 50px;
+  font-family: "Oxanium", sans-serif;
+  margin-bottom: 10px;
 }
-
-.text-overlay {
-  margin: auto;
+.texts h5 {
+  font-weight: normal;
+  font-size: 15px;
 }
-.text-overlay h3 {
-  position: absolute;
-  top: 1%;
-  right: 43%;
-  color: #6bc6ff;
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  text-align: center;
-  font-size: 30px;
-  font-weight: bold;
-  font-family: "Pacifico", cursive;
-}
-
-.animated-text::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: transparent;
-  animation: reveal 5s linear forwards;
-}
-@keyframes reveal {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-.animated-text::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  background-color: #000;
-  animation: cursor 5s linear infinite;
-}
-@keyframes cursor {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: 100%;
-  }
-}
-
-.text-overlay2 h3 {
-  position: absolute;
-  width: 350px;
-  top: 1%;
-  color: #ffffff;
-  line-height: 110px;
-  right: 39%;
-  text-align: center;
-  font-size: 80px;
-  font-style: italic;
-  font-weight: bold;
-  font-family: "Pacifico";
-}
-
 .connect button {
-  margin: auto;
-  width: 300px;
-  height: 37px;
-  position: absolute;
-  top: 93%;
-  right: 42%;
-  font-size: 18px;
+  width: 350px;
+  height: 40px;
+  font-size: 17px;
   font-weight: bold;
-  background-color: #000;
+  background-color: transparent;
   box-shadow: 0px 0px 15px #3b98d1;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 3px;
   cursor: pointer;
-  /* margin-bottom: 30px;
-  margin-top: 20px; */
+  margin-bottom: 30px;
+  margin-top: 20px;
 }
 .connect button:hover {
   background: #3b98d1;
   color: #ffffff;
 }
 
-p.feature {
-  position: absolute;
-  top: 86%;
-  left: 37.5%;
-  font-weight: bold;
-  font-size: 14px;
+.bottom {
+  display: flex;
+}
+.first {
+  font-weight: normal;
+  margin-top: 20px;
+  height: 50px;
+}
+.first h1 {
+  margin-bottom: -15px;
+  font-weight: normal;
+  margin-top: -10px;
+}
+.first h5 {
+  font-weight: normal;
+  padding-top: 2px;
+}
+
+.second {
+  font-weight: normal;
+  margin-left: 40px;
+  margin-top: 20px;
+  border-left: 2px solid #3b98d1;
+  padding-left: 50px;
+  height: 50px;
+}
+.second h1 {
+  margin-bottom: -15px;
+  margin-top: -10px;
+  font-weight: normal;
+}
+.second h5 {
+  font-weight: normal;
+  padding-top: 2px;
+}
+
+.second-side {
+  margin: auto;
+  margin-top: 70px;
+}
+
+.second-side img {
+  /* margin: auto; */
+  width: 450px;
+  height: 538px;
+}
+
+/* Collection Stylings */
+.collection-body {
+  margin-top: 70px;
+}
+
+.did-you {
+  margin: auto;
+  margin-bottom: 50px;
+  text-align: center;
+  max-width: 800px;
+  line-height: 20px;
+}
+
+.expensive-nft {
+  text-align: center;
+  margin: auto;
+  max-width: 1200px;
+}
+.ape-one {
+  margin: auto;
+  margin-top: 50px;
+  max-width: 100%;
+  text-align: center;
+  display: flex;
+}
+
+.side1 {
+  margin: auto;
+  margin-top: -5px;
+  text-align: left;
+  width: 350px;
+}
+.side1 p {
+  line-height: 20px;
+}
+.side1 ul {
+  margin-top: -10px;
+}
+.side2 {
+  margin-right: 100px;
+  margin-bottom: 10px;
+}
+.side2 img {
+  width: 300px;
+  height: 300px;
+  margin-left: 70px;
 }
 
 /* .Copyright h5 {
@@ -168,6 +269,7 @@ p.feature {
 
 /* Account Styling */
 .account-main {
+  display: none;
   width: 500px;
   align-content: center;
   position: absolute;
@@ -181,42 +283,6 @@ p.feature {
 }
 .account-main h1 {
   margin-top: -2px;
-}
-
-p.invalid {
-  margin: auto;
-  padding: 5px;
-  text-align: left;
-  margin-top: -15px;
-  color: red;
-  margin-left: 50px;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.successful-main {
-  width: 500px;
-  align-content: center;
-  position: absolute;
-  border-radius: 8px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 30px;
-  background-color: #000;
-  z-index: 10;
-}
-
-.existing p a {
-  font-size: 20px;
-  text-decoration: none;
-  color: #fff;
-}
-.existing p a:hover {
-  font-weight: bold;
-}
-.existing span {
-  font-size: 16px;
 }
 
 .account-body {
@@ -290,6 +356,7 @@ p.invalid {
 }
 
 .overlay {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -316,6 +383,67 @@ p.invalid {
   z-index: 10;
 }
 
+/* Footer Styling */
+footer {
+  max-width: 100%;
+  margin: auto;
+  margin-top: 50px;
+  padding: 20px;
+  display: flex;
+  text-align: center;
+  box-shadow: 0px 0px 15px #3b98d1;
+}
+
+.big-footer {
+  margin: auto;
+  margin-top: -10px;
+  /* margin-left: 30px; */
+}
+
+.big-footer h1 {
+  text-align: center;
+  width: 300px;
+}
+.connect-new button {
+  width: 200px;
+  margin-top: 2px;
+}
+
+footer h2 {
+  text-align: center;
+  padding-left: 40px;
+  margin-bottom: -2px;
+}
+
+.popular-nft {
+  margin: auto;
+  width: 220px;
+  margin-top: 15px;
+}
+.links {
+  margin: auto;
+  width: 220px;
+  margin-top: 15px;
+}
+.address {
+  margin: auto;
+  width: 280px;
+  margin-top: 15px;
+}
+
+footer ul li {
+  list-style-type: none;
+  color: #fff;
+  padding-bottom: 5px;
+}
+footer ul li:hover {
+  font-weight: bold;
+}
+
+footer a {
+  text-decoration: none;
+}
+
 /* MOBILE RESPONSIVENESS */
 /* MEDIA QUERY FOR HEADER */
 /* For screens with max width of 952px */
@@ -326,8 +454,14 @@ p.invalid {
     margin-left: -10px;
   }
   .button button {
-    display: none;
+    font-size: small;
+    padding: 5px;
+    margin: auto;
+    width: 57px;
+    height: 30px;
+    margin-left: -150px;
   }
+
   .body-head ul li {
     text-align: center;
   }
@@ -369,7 +503,7 @@ p.invalid {
     width: 100%;
     height: 100vh;
     background: #000;
-    top: 54%;
+    top: 60%;
     left: 46%;
     transform: translate(-50%, -50%);
     transition: 0.15s ease-in-out;
@@ -393,15 +527,6 @@ p.invalid {
     display: none;
   }
 
-  p.feature {
-    margin: auto;
-    position: absolute;
-    top: 92%;
-    left: 6.5%;
-    font-weight: bold;
-    font-size: 16px;
-  }
-
   /* Account Styling */
   .account-main {
     width: 280px;
@@ -411,13 +536,6 @@ p.invalid {
     transform: translate(-50%, -50%);
   }
   .login-main {
-    width: 280px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .successful-main {
     width: 280px;
     position: absolute;
     top: 50%;
@@ -441,6 +559,23 @@ p.invalid {
     margin-left: 100px;
   }
 
+  /* Username Styling */
+  .dashboard {
+    margin: auto;
+    box-shadow: 0px 0px 15px #3b98d1;
+    background: transparent;
+    margin-top: 50px;
+    margin-bottom: -20px;
+    max-width: 150px;
+  }
+  .dashboard h3 {
+    margin: auto;
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+  }
+
   /* Small Body Style */
   .small-body {
     flex-direction: column;
@@ -448,7 +583,7 @@ p.invalid {
   .first-side {
     width: 100%;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 40px;
     order: 1;
   }
   .texts {
@@ -465,8 +600,6 @@ p.invalid {
     text-align: center;
   }
   .connect button {
-    top: 97%;
-    right: 6%;
     width: 330px;
   }
   .bottom {
@@ -482,18 +615,8 @@ p.invalid {
     order: 2;
   }
   .second-side img {
-    margin-top: 70px;
-    width: 380px;
-    height: 489px;
-  }
-  .text-overlay h3 {
-    margin-top: 5px;
-    right: 13%;
-  }
-  .text-overlay2 h3 {
-    right: 8%;
-    font-size: 70px;
-    width: 300px;
+    width: 350px;
+    height: 438px;
   }
   .did-you h1 {
     font-size: 30px;

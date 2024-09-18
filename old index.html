@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>NFT's by CYPHER</title>
+  </head>
+  <body>
+    <div class="main-body">
+      <!-- Account Section Sign Up -->
+      <div class="account-main hidden">
+        <h1>Create Wallet</h1>
+        <div class="account-body">
+          <div class="google-button">
+            <a href="https://www.gmail.com"
+              ><img src="images/google.webp" width="30px" height="30px" />
+              <button>Continue with Google</button></a
+            >
+          </div>
+          <p>_________OR_________</p>
+          <div class="details">
+            <input
+              type="text"
+              id="username"
+              placeholder="Username: (max of 5 letters)"
+            /><br />
+            <p class="invalid hidden" id="invalidUsername">
+              Username is too long!
+            </p>
+            <input type="text" id="email" placeholder="Email:" /><br />
+            <p class="invalid hidden" id="invalidEmail">Invalid Email!</p>
+            <input
+              type="password"
+              id="password"
+              placeholder="Password:"
+            /><br />
+            <p class="invalid hidden" id="invalidPassword">
+              Password is too short!
+            </p>
+          </div>
+          <div class="create">
+            <button id="signUp">Create Wallet</button>
+          </div>
+          <div class="existing">
+            <p>
+              Have an Existing Wallet?
+              <span id="switchToLogin"><a href="#">Login</a></span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="successful-main hidden">
+        <h1>Successful ✅</h1>
+        <div class="account-body">
+          <div class="existing">
+            <p>
+              <a href="#" id="switchToLogin2">Login </a><span>to continue</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Account Section Login -->
+      <div class="login-main hidden">
+        <h1>Login Wallet</h1>
+        <div class="account-body">
+          <div class="details">
+            <input type="text" id="email2" placeholder="Email:" /><br />
+            <p class="invalid hidden" id="invalidEmail">Invalid Email!</p>
+            <input
+              type="password"
+              id="password2"
+              placeholder="Password:"
+            /><br />
+            <p class="invalid hidden" id="invalidPassword">
+              Password is too short!
+            </p>
+          </div>
+          <div class="create">
+            <button id="Login">Login Wallet</button>
+          </div>
+          <div class="existing">
+            <p>
+              Don't have a Wallet?
+              <span id="switchToSignup"><a href="#">Sign Up</a></span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- NFT Gif Image  -->
+      <div class="small-body">
+        <div class="second-side">
+          <img src="images/crop gif.webp" />
+        </div>
+
+        <div class="text-overlay">
+          <h3 class="animated-text">Welcome on Board!</h3>
+        </div>
+
+        <div class="text-overlay2">
+          <h3>Showcase your Digital Arts!</h3>
+        </div>
+
+        <p class="feature">Kindly Create Wallet to see Full Feature</p>
+
+        <div class="connect open-modal">
+          <button>Create Wallet</button>
+        </div>
+      </div>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <!-- <script type="module" src="firebase-auth.js"></script> -->
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js"></script>
+    <!-- Your custom script -->
+    <script src="firebase-init.js" defer></script>
+
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
+
+<!-- <div class="Copyright">
+    <h5>Copyright | CypherDev 2024</h5>
+  </div> -->
